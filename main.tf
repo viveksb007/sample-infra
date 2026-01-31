@@ -16,12 +16,12 @@ provider "aws" {
 # Lambda Function
 resource "aws_lambda_function" "api" {
   function_name = "sample-api"
-  runtime       = "python3.11"
+  runtime       = "python3.9"  # DEPRECATED as of Dec 15, 2025!
   handler       = "index.handler"
   role          = aws_iam_role.lambda.arn
   filename      = "lambda.zip"
   
-  memory_size = 512  # Max is 10240 MB - doc change could affect this
+  memory_size = 512  # Max is 10240 MB
   timeout     = 30
   
   environment {
