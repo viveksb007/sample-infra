@@ -1,11 +1,8 @@
 # Sample AWS Infrastructure
 
-Demo Terraform repo for testing Infra Reconciler.
+Terraform configurations for AWS resources.
 
 ## Resources
-- AWS Lambda function
-- S3 bucket with versioning
-- IAM role
 
-## Monitored Docs
-- https://docs.aws.amazon.com/lambda/latest/dg/configuration-memory.html
+- **Lambda**: Serverless function with IAM role
+- **EKS**: Kubernetes cluster with Auto Mode, node groups, and AL2023 launch template
