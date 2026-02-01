@@ -6,7 +6,7 @@ resource "aws_eks_cluster" "main" {
     subnet_ids = var.subnet_ids
   }
 
-  # Auto Mode with older instance types
+  # Auto Mode
   compute_config {
     enabled       = true
     node_pools    = ["general-purpose"]
@@ -14,7 +14,6 @@ resource "aws_eks_cluster" "main" {
   }
 }
 
-# Node group using m5 and c5 instance types
 resource "aws_eks_node_group" "workers" {
   cluster_name    = aws_eks_cluster.main.name
   node_group_name = "workers"
@@ -30,7 +29,6 @@ resource "aws_eks_node_group" "workers" {
   }
 }
 
-# AL2023 launch template with nodeadm anti-pattern
 resource "aws_launch_template" "al2023" {
   name = "eks-al2023-node"
 
