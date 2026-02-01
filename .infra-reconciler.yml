@@ -1,7 +1,7 @@
-# Infra Reconciler Configuration
-
-monitor:
+monitored_urls:
   - https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html
+  - https://docs.aws.amazon.com/eks/latest/userguide/automode-learn-instances.html
+  - https://docs.aws.amazon.com/eks/latest/userguide/al2023.html
 
-notify:
+notify_emails:
   - viveksbhadauria007@gmail.com
